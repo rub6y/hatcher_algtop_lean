@@ -6,24 +6,316 @@
 % the current file can be a simple sequence of \input. Otherwise It
 % can start with a \section or \chapter for instance.
 
-\section {Addition}
 
-\begin{theorem}[Stefan Prace 1984]
-\label{thm:one_plus_one}
-\lean {one_plus_one}
-Dane są dwie liczby $x$ i $y$. Jeśli $x = 1$ i $y = 1$ to $x + y = 2$
-\end{theorem}
-\begin{proof}
-  Jest to prosty wniosek z tw. Stefana Prace
-\end{proof}
+\chapter{Fundamental Group of Circle}
 
-\section {Multiplication}
-\begin{theorem}[Warol Kojtyła 2015]
-\label{thm:21_not_prime}
-\lean {twentyone_not_prime}
-Liczba $21$ nie jest pierwsza
-\end{theorem}
-\begin{proof}
-  \uses{thm:one_plus_one}
-  $21 = 3 \cdot 7$
-\end{proof}
+    \section{Homotopy Definitions}
+
+    In this section we provide all the definition , lemmas and theorems regarding homotopies. 
+    At the end we provide the definition of Fundamental Group of Topological Space and proof that it
+    has a group structure.
+
+    \begin{definition}[Homotopy of maps]
+        \label{def:homotopy}
+        
+        Let $X,Y$ be topological spaces. We say that maps $f,g : X \to Y$ are homotopic ($f \simeq g$) iff there exists a continoues map $H : X \times I \to Y$ such that
+        for any $x \in X$ 
+            $$H(x,0) =  f(x) \text{ and } H(x,1) = g(x)$$.
+    \end{definition}
+
+    \begin{definition}[Path]
+        \label{def:path}
+
+        A path between points $x,y \in X$ is a continoues function $\gamma : I \to X$ such that 
+            $$\gamma(0) = x \text{ and } \gamma(1) = y$$
+
+    \end{definition}
+
+    \begin{definition}[Loop]
+        \label{def:loop}
+        \uses{def:path}
+
+        A loop is a path where $x = y$.
+    \end{definition}
+
+    \begin{definition}[Homotopy of Paths]
+        \label{def:path_homotopy}
+        \uses{def:path, def:homotopy}
+
+        We say that two paths $\gamma_1, \gamma_2$ ($\gamma_1 \simeq_p \gamma_2$) from $x$ to $y$ are homotopic iff there exists homotopy map $H : I \times I \to X$
+        such that H is homotopy of $\gamma_1, \gamma_2$ and for all $t \in I$ function $H(\cdot, t)$ is a path from $x$ to $y$.
+    \end{definition}
+
+    \begin{lemma}[All paths from $x$ to $y$ in $\mathbb{R}^n$ are Homotopic]
+        \label{lem:Rn_path_equiv_lemma}
+        \uses{def:path_homotopy}
+
+        Any two paths $\gamma_1, \gamma_2$ from $x$ to $y$ in $\mathbb{R}^n$ are homotopic.
+    \end{lemma}
+
+    \begin{theorem}[Homotopy is equvialence relation]
+        \label{thm:homotopy_equiv}
+        \uses{def:homotopy}
+
+        Relation $\simeq$ is an equvialence relation.
+    \end{theorem}
+
+    \begin{theorem}[Homotopy of paths is equvialence relation]
+        \label{thm:path_homotopy_equiv}
+        \uses{thm:homotopy_equiv, def:path_homotopy}
+
+        Relation $\simeq_p$ of paths is an equvialence relation.
+    \end{theorem}
+
+    \begin{definition}[Composition of paths]
+        \label{def:path_composition}
+        \uses{def:path}
+
+        Given to paths $\gamma_1, \gamma_2$ we definte $\gamma_1 \cdot \gamma_2$ by the formula:
+
+        $$
+            \gamma_1 \cdot \gamma_2 (t) =
+            \begin{cases}
+            \gamma_1(2s), & \text{if } t \leq \frac{1}{2}, \\
+            \gamma_2(1-2s), & \text{if } t \geq \frac{1}{2}
+            \end{cases}
+        $$
+    \end{definition}
+
+    \begin{definition}[Inverse of paths]
+        \label{def:path_inverse}
+        \uses{def:path}
+
+        Given to paths $\gamma$ we definte $\bar{\gamma}$ (inverse of $\gamma$) by the formula:
+
+        $$
+            \bar{\gamma}(t) = \gamma(1-t)
+        $$
+    \end{definition}
+
+    \begin{lemma}[Composition of paths is a path]
+        \label{lem:path_comp_path}
+        \uses{def:path,def:path_composition}
+
+        Composition of paths is a path (The map given by \ref{def:path_composition} is continoues) 
+    \end{lemma}
+
+    \begin{lemma}[Inverse of paths is a path]
+        \label{lem:path_inverse_path}
+        \uses{def:path,def:path_inverse}
+
+        Inverse of path is a path (The map given by \ref{def:path_inverse} is continoues) 
+    \end{lemma}
+
+    \begin{lemma}[Composition of paths depend on homotopy class]
+        \label{lem:path_comp_homoclass}
+        \uses{def:path, def:path_composition, def:path_homotopy,thm:path_homotopy_equiv}
+
+        If $f_0 \simeq_p f_1$ and $g_0 \simeq_p g_1$ then $f_0 \cdot g_0 \simeq_path f_1 \cdot g_1$ 
+    \end{lemma}
+
+    \begin{lemma}[Inverse of paths depend on homotopy class]
+        \label{lem:path_inverse_homoclass}
+        \uses{def:path, def:path_inverse, def:path_homotopy,thm:path_homotopy_equiv}
+
+        If $f_0,f_1$ are to homotopic paths then $\bar{f_0}, \bar{f_1}$ are also homotopic.
+    \end{lemma}
+
+    \begin{theorem}[Homotopy of loops is equvialence relation]
+        \label{thm:loop_homotopy_equiv}
+        \uses{thm:path_homotopy_equiv, def:path_homotopy}
+
+        Relation $\simeq_l$ of loops is an equvialence relation. (We use $\simeq$ to simplify notation)
+    \end{theorem}
+
+    \begin{lemma}[Composition of loops is a loop]
+        \label{lem:loop_comp_loop}
+        \uses{def:loop, lem:path_comp_path}
+        
+        Composition of loops is a loop.
+    \end{lemma}
+
+    \begin{lemma}[Inverse of loop is a loop]
+        \label{lem:loop_inverse_loop}
+        \uses{def:loop,def:path_inverse_path}
+
+        Inverse of loop is a loop (The map given by \ref{def:path_inverse} is continoues) 
+    \end{lemma}
+
+    \begin{lemma}[Composition of loops depend on homotopy class]
+        \label{lem:loop_comp_homoclass}
+        \uses{lem:loop_comp_loop, lem:path_comp_homoclass, thm:loop_homotopy_equiv}
+
+        If $f_0 \simeq_p f_1$ and $g_0 \simeq_p g_1$ then $f_0 \cdot g_0 \simeq_p f_1 \cdot g_1$ 
+    \end{lemma}
+
+    \begin{lemma}[Inverse of loops depend on homotopy class]
+        \label{lem:loop_inverse_homoclass}
+        \uses{lem:loop_inverse_loop, lem:path_inverse_homoclass, thm:loop_homotopy_equiv}
+
+        If $f_0,f_1$ are to homotopic loops then $\bar{f_0}, \bar{f_1}$ are also homotopic.
+    \end{lemma}
+
+    \begin{definition}[Fundamental Group]
+        \label{def:fundamental_group}
+        \uses{lem:loop_comp_homoclass, lem:loop_inverse_homoclass}
+
+        We definie the fundamental group of $(\pi_1(X, x_0),\cdot)$ as the set of equvialence classes of relation $\simeq$ with 
+        the operation $\cdot$ - composition of loops
+    \end{definition}
+
+    \begin{lemma}[Composition is associative]
+        \label{lem:loop_comp_assoc}
+        \uses{def:fundamental_group}
+
+        The operation $\cdot$ is associative.
+    \end{lemma}
+
+    \begin{lemma}[Composition has natural element]
+        \label{lem:loop_comp_neutral}
+        \uses{def:fundamental_group}
+        
+        There is an neutral element of $\cdot$, which is $[\text{const}_{x_0}]_{\simeq}$
+    \end{lemma}
+
+    \begin{lemma}[Composition has inverse]
+        \label{lem:loop_comp_inv}
+        \uses{def:fundamental_group}
+
+        For every element of $\pi_1(X, x_0)$ there exists an inverse such that: 
+
+        $[f] \cdot [g] = [\text{const}_{x_0}]$
+    \end{lemma}
+    
+    \begin{theorem} [Fundamental Group is a Group]
+        \label{thm:fundamental_group_is_group}
+        \uses{lem:loop_comp_inv, lem:loop_comp_neutral, lem:loop_comp_assoc}
+
+        The fundamental group is a group
+    \end{theorem}
+
+    \begin{theorem} [Fundamental Group of $\mathbb{R}^n$]
+        \label{thm:Rn_fundamental_group}
+        \uses{thm:fundamental_group_is_group, lem:Rn_path_equiv_lemma}
+        
+        The fundamental group of $\mathbb{R}^n$ is trivial
+
+    \end{theorem}
+
+    
+
+    \section{Fundamental Group properties}
+
+    \begin{definition}[$\beta_h$ map]
+        \label{def:beta_h_map}
+        \uses{def:fundamental_group}
+
+        Given a path $h$ from $x_0$ to $x_1$ we definie a map $\beta_h : \pi_1(X,x_0) \to \pi_1(X,x_1)$ as
+        $$\beta_h ([\gamma]) = [h \cdot \gamma \cdot \bar{h}]$$
+    \end{definition}
+
+    \begin{lemma}[$\beta_h$ map is well definied]
+        \label{lem:beta_h_map_welldef}
+        \uses{def:beta_h_map}
+
+        Map $\beta_h$ is well definied.
+    \end{lemma}
+
+    \begin{lemma}[$\beta_h$ map is isomorphism of groups]
+        \label{lem:beta_h_map_iso}
+        \uses{def:beta_h_map}
+
+        Map $\beta_h$ is an isomorphism.
+    \end{lemma}
+
+    \begin{lemma}[Fundamental Group doesnt depend on base point]
+        \label{fundamental_group_basepoint_dependence}
+        \uses{lem:beta_h_map_iso}
+
+        For path connected space fundamental groups based on $x_0, x_1$ are isomorphic. 
+    \end{lemma}
+
+    \begin{definition}[Loops in $S^1$]
+        \label{def:wn_loop}
+        For $n \in \mathbb{Z}$ let us define: 
+        $$\omega_n(s) = (\cos{2\pi ns}, \sin{2 \pi ns})$$
+
+        Note: $\omega_n$ is the loop running $n$-times around the circle clockwise or counterclockwise
+        depending on the sign of $n$.
+    \end{definition}
+
+    \begin{lemma}[$\omega_n$ is a loop]
+        \label{lem:wn_loop_is_loop}
+        \uses{def:wn_loop, def:loop}
+
+        For each $n \in \mathbb{Z}$: $\omega_n$ is a loop based in $(1,0)$.
+    \end{lemma}
+
+    \begin{definition}[Evenly covered]
+        \label{def:evenly_covered}
+
+        Let $f : X \to Y$ be a map and $U \subset Y$ be an open set. We say that $U$ is evenly covered
+        by $f$ when $f^{-1}(U)$ is a union of disjoint open sets each of which is mapped homeomorphically onto $U$ by $f$.
+    \end{definition}
+
+    \begin{definition}[Covering space]
+        \label{def:covering_space}
+        \uses{def:evenly_covered}
+
+        Given a space $X$, a covering space is a space $\tilde{X}$ together with a map $p : \tilde{X} \to X$ such that:
+        For each point $x \in X$, $x$ has a evenly covered neighbourhood $U$ by $p$.
+    \end{definition}
+
+    \begin{lemma}[Homotopy lifting property]
+        \label{lem:homotop_lifting}
+        \uses{def:covering_space}
+
+        Given a map $F:Y\times I \to X$ and a map $\tilde{F}: Y \times \{0\} \to \tilde{X}$ lifting $F|Y\times \{0\}$, then
+        there is a unique map $\tilde{F}: Y \times I \to \tilde{X}$ lifting $F$ and restricting to the given $\tilde{F}$ on $Y \times \{0\}$.
+    \end{lemma}
+
+    \begin{lemma}[Path lifting property]
+        \label{lem:path_lifting}
+        \uses{lem:homotop_lifting}
+
+        For each path $f:I \to X$ starting at a point $x_0 \in X$ and each $\tilde{x_0} \in p^{-1}(x_0)$ there
+        is a unique lift $\tilde{f}:I \to \tilde{X}$ starting at $\tilde{x_0}$.
+
+    \end{lemma}
+
+    \begin{lemma}[Homotopy path lifting property]
+        \label{lem:homotop_path_lifting}
+        \uses{lem:homotop_lifting}
+
+        For each homotopy $H : X \times I \to X$ of paths starting at $x_0$ and each $\tilde{x_0} \in p^{-1}(x_0)$ there
+        is a unique lifted homotopy $\tilde{H} : X \times I \to \tilde{X}$ of paths starting at $\tilde{x_0}$.
+    \end{lemma}
+
+    \begin{lemma}[$\omega_n$ are not homotopic]
+        \label{lem:wn_diff_homoclass}
+        \uses{lem:homotop_path_lifting, lem:path_lifting, lem:Rn_path_equiv_lemma, lem:wn_loop_is_loop}
+
+        Let $n \neq m$ be integers. Then $\omega_n \nsim \omega_m$.
+    \end{lemma}
+
+    \begin{lemma}[All $S^1$ loops are $\omega_n$]
+        \label{lem:loop_S1_homotopic_wn}
+        \uses{lem:homotop_path_lifting, lem:path_lifting, lem:Rn_path_equiv_lemma, lem:wn_loop_is_loop}
+
+        Let $\gamma$ be a loop in $S^1$ based at $(1,0)$. Then there exists $n \in \mathbb{Z}$
+        such that $\gamma \sim \omega_n$.
+    \end{lemma}
+
+    \begin{lemma}[Additive structure on $\omega_n$]
+        \label{lem:wn_comp_is_sum}
+        
+        Let $n,m \in \mathbb{Z}$. Then 
+        $$[\omega_n] \cdot [\omega_m] = [\omega_{n+m}]$$
+    \end{lemma}
+
+    \begin{theorem}[Fundamental group of S1]
+        \label{thm:fundamental_group_of_S1}
+        \uses{def:fundamental_group,lem:loop_S1_homotopic_wn, lem:wn_diff_homoclass, lem:wn_comp_is_sum}
+
+        $\pi_1(S^1) \cong \mathbb{Z}$
+    \end{theorem}
