@@ -53,6 +53,10 @@
         Any two paths $\gamma_1, \gamma_2$ from $x$ to $y$ in $\mathbb{R}^n$ are homotopic.
     \end{lemma}
 
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=34}{See here!}
+    \end{proof}
+
     \begin{theorem}[Homotopy is equvialence relation]
         \label{thm:homotopy_equiv}
         \uses{def:homotopy}
@@ -66,6 +70,10 @@
 
         Relation $\simeq_p$ of paths is an equvialence relation.
     \end{theorem}
+
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=35}{See here!}
+    \end{proof}
 
     \begin{definition}[Composition of paths]
         \label{def:path_composition}
@@ -194,6 +202,10 @@
         The fundamental group is a group
     \end{theorem}
 
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=36}{See here!}
+    \end{proof}
+
     \begin{theorem} [Fundamental Group of $\mathbb{R}^n$]
         \label{thm:Rn_fundamental_group}
         \uses{thm:fundamental_group_is_group, lem:Rn_path_equiv_lemma}
@@ -202,7 +214,9 @@
 
     \end{theorem}
 
-    
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=36}{See here!}
+    \end{proof}
 
     \section{Fundamental Group properties}
 
@@ -221,6 +235,10 @@
         Map $\beta_h$ is well definied.
     \end{lemma}
 
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=37}{See here!}
+    \end{proof}
+
     \begin{lemma}[$\beta_h$ map is isomorphism of groups]
         \label{lem:beta_h_map_iso}
         \uses{def:beta_h_map}
@@ -228,12 +246,20 @@
         Map $\beta_h$ is an isomorphism.
     \end{lemma}
 
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=37}{See here!}
+    \end{proof}
+
     \begin{lemma}[Fundamental Group doesnt depend on base point]
         \label{fundamental_group_basepoint_dependence}
         \uses{lem:beta_h_map_iso}
 
         For path connected space fundamental groups based on $x_0, x_1$ are isomorphic. 
     \end{lemma}
+
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=37}{See here!}
+    \end{proof}
 
     \begin{definition}[Loops in $S^1$]
         \label{def:wn_loop}
@@ -274,6 +300,11 @@
         there is a unique map $\tilde{F}: Y \times I \to \tilde{X}$ lifting $F$ and restricting to the given $\tilde{F}$ on $Y \times \{0\}$.
     \end{lemma}
 
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=39}{See here!} (Part "c)" in this proof ) \\
+        \href{https://agorism.dev/book/math/top/intro-topological-manifolds_john-lee.pdf#page=240}{Or here!} Here it is done for $S^1$ but it can be swaped to $X$
+    \end{proof}
+
     \begin{lemma}[Path lifting property]
         \label{lem:path_lifting}
         \uses{lem:homotop_lifting}
@@ -283,6 +314,10 @@
 
     \end{lemma}
 
+    \begin{proof}
+            \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=39}{See here!}
+    \end{proof}
+
     \begin{lemma}[Homotopy path lifting property]
         \label{lem:homotop_path_lifting}
         \uses{lem:homotop_lifting}
@@ -291,12 +326,20 @@
         is a unique lifted homotopy $\tilde{H} : X \times I \to \tilde{X}$ of paths starting at $\tilde{x_0}$.
     \end{lemma}
 
+    \begin{proof}
+            \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=39}{See here!}
+    \end{proof}
+
     \begin{lemma}[$\omega_n$ are not homotopic]
         \label{lem:wn_diff_homoclass}
         \uses{lem:homotop_path_lifting, lem:path_lifting, lem:Rn_path_equiv_lemma, lem:wn_loop_is_loop}
 
         Let $n \neq m$ be integers. Then $\omega_n \nsim \omega_m$.
     \end{lemma}
+
+    \begin{proof}
+            \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=39}{See here!}
+    \end{proof}
 
     \begin{lemma}[All $S^1$ loops are $\omega_n$]
         \label{lem:loop_S1_homotopic_wn}
@@ -305,6 +348,10 @@
         Let $\gamma$ be a loop in $S^1$ based at $(1,0)$. Then there exists $n \in \mathbb{Z}$
         such that $\gamma \sim \omega_n$.
     \end{lemma}
+
+    \begin{proof}
+            \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=39}{See here!}
+    \end{proof}
 
     \begin{lemma}[Additive structure on $\omega_n$]
         \label{lem:wn_comp_is_sum}
@@ -319,3 +366,7 @@
 
         $\pi_1(S^1) \cong \mathbb{Z}$
     \end{theorem}
+
+    \begin{proof}
+            \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=38}{See here!}
+    \end{proof}
