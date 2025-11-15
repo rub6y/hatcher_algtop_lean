@@ -41,6 +41,14 @@
         such that H is homotopy of $\gamma_1, \gamma_2$ and for all $t \in I$ function $H(\cdot, t)$ is a path from $x$ to $y$.
     \end{definition}
 
+    \begin{definition}[Homotopy of Loops]
+        \label{def:loop_homotopy}
+        \uses{def:loop, def:homotopy}
+
+        We say that two loops $\gamma_1, \gamma_2$ ($\gamma_1 \simeq_l \gamma_2$) based in $x$ are homotopic iff there exists homotopy map $H : I \times I \to X$
+        such that H is homotopy of $\gamma_1, \gamma_2$ and for all $t \in I$ function $H(\cdot, t)$ is a loop based in $x$.
+    \end{definition}
+
     \begin{lemma}[All paths from $x$ to $y$ in $\mathbb{R}^n$ are Homotopic]
         \label{lem:Rn_path_equiv_lemma}
         \uses{def:path_homotopy}
@@ -64,7 +72,18 @@
         \label{thm:path_homotopy_equiv}
         \uses{thm:homotopy_equiv, def:path_homotopy}
 
-        Relation $\simeq_p$ of paths is an equvialence relation.
+        Relation $\simeq_p$ on paths is an equvialence relation.
+    \end{theorem}
+
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=35}{See here!}
+    \end{proof}
+
+    \begin{theorem}[Homotopy of loops is equvialence relation]
+        \label{thm:loop_homotopy_equiv}
+        \uses{thm:homotopy_equiv, def:loop_homotopy}
+
+        Relation $\simeq_l$ on loops is an equvialence relation.
     \end{theorem}
 
     \begin{proof}
@@ -127,7 +146,7 @@
 
     \begin{theorem}[Homotopy of loops is equvialence relation]
         \label{thm:loop_homotopy_equiv}
-        \uses{thm:path_homotopy_equiv, def:path_homotopy}
+        \uses{thm:path_homotopy_equiv, def:loop_homotopy}
 
         Relation $\simeq_l$ of loops is an equvialence relation. (We use $\simeq$ to simplify notation)
     \end{theorem}
@@ -141,7 +160,7 @@
 
     \begin{lemma}[Inverse of loop is a loop]
         \label{lem:loop_inverse_loop}
-        \uses{def:loop,def:path_inverse_path}
+        \uses{def:loop,lem:path_inverse_path}
 
         Inverse of loop is a loop (The map given by \ref{def:path_inverse} is continoues)
     \end{lemma}

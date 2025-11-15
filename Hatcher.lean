@@ -58,6 +58,8 @@ def PathHomotopic (x y : X) (γ₁ γ₂ : Path x y) :=
 
 notation:50 f "≃ₚ" g => Homotopic f g
 
+--
+
 -- Lemma 5 (All paths from to in are Homotopic)
 lemma Rn_allpathHomotopic (n : ℕ) :  ∀ (x y : Fin n → ℝ) (γ₁ γ₂ : Path x y), γ₁ ≃ₚ γ₂ := by
   sorry

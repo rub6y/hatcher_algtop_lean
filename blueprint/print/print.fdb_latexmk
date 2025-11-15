@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1763240469.54746 "print.tex" "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.pdf" "print" 1763240476.21354 0
-  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.aux" 1763240476.02411 3886 62471e39aadc5038f6e7ef6283226253 "pdflatex"
-  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.out" 1763240476.02511 544 87db8f675b39172c45c3322fb430eff5 "pdflatex"
+["pdflatex"] 1763241048.76106 "print.tex" "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.pdf" "print" 1763241055.33382 0
+  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.aux" 1763241055.15437 4058 f34073506e4d8db049b4dcfaf23a66fc "pdflatex"
+  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.out" 1763241055.15537 544 87db8f675b39172c45c3322fb430eff5 "pdflatex"
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -84,7 +84,7 @@
   "macros/print.tex" 1762031254.12782 1101 87627b2ec24fef68edc71c13f43f7bab ""
   "print.tex" 1762031254.12782 1165 36f01b60fc9014b9af21e5fcd320f62b ""
   "sections/FundamentalGroup.tex" 1763232900.99448 5589 1c04d393e8e2f303c1bc7e7edefde3ba ""
-  "sections/HomotopyDefinitios.tex" 1763240462.1192 7399 bc24d3ca78d316bd23a7ec7c8e578030 ""
+  "sections/HomotopyDefinitios.tex" 1763241030.91052 8180 23d645684a23dfc18559e10b9930856c ""
   (generated)
   "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.aux"
   "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.log"

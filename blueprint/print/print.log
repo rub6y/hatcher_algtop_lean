@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.23)  15 NOV 2025 22:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.23)  15 NOV 2025 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -615,7 +615,11 @@ ex))) (./macros/common.tex
 \c@theorem=\count330
 ) (./macros/print.tex)
 (/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint
-/print/print.aux)
+/print/print.aux
+
+LaTeX Warning: Label `thm:path_homotopy_equiv' multiply defined.
+
+)
 \openout1 = `print.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -939,7 +943,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 ]
 
 LaTeX Warning: Reference `def:path_inverse_path' on page 2 undefined on input l
-ine 144.
+ine 163.
 
 
 
@@ -958,17 +962,20 @@ L3 programming layer <2025-07-19>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `print.out' has not changed.
 (rerunfilecheck)             Checksum: 87DB8F675B39172C45C3322FB430EFF5;544.
  ) 
 Here is how much of TeX's memory you used:
- 16723 strings out of 468457
- 308260 string characters out of 5445913
+ 16724 strings out of 468457
+ 308279 string characters out of 5445913
  915811 words of memory out of 5000000
- 44958 multiletter control sequences out of 15000+600000
+ 44959 multiletter control sequences out of 15000+600000
  632212 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,9n,107p,542b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,9n,107p,542b,485s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on /home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algt
 op_lean/blueprint/print/print.pdf (5 pages).
