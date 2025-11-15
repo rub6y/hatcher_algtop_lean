@@ -4,7 +4,7 @@ This forked project is carried out by the Scientific Circle of Theoretical Mathe
 
 # Blueprint
 
-We provide a blueprint [here](https://szaranczuk.github.io/hatcher_algtop_lean/).
+We provide a blueprint [here](https://rub6y.github.io/hatcher_algtop_lean/).
 
 Instructions on using blueprint can be found [here](https://github.com/PatrickMassot/leanblueprint).
 
