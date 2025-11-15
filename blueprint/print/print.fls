@@ -186,6 +186,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./sections/FundamentalGroup.tex
+INPUT ./sections/FundamentalGroup.tex
+INPUT sections/FundamentalGroup.tex
 INPUT /home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.aux
 INPUT /home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.out
 INPUT /home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.out
