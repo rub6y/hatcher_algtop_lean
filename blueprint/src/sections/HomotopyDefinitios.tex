@@ -1,0 +1,208 @@
+\section{Homotopy Definitions}
+
+    In this section we provide all the definition , lemmas and theorems regarding homotopies.
+    At the end we provide the definition of Fundamental Group of Topological Space and proof that it
+    has a group structure.
+
+    \begin{definition}[Homotopy of maps]
+        \label{def:homotopy}
+
+        Let $X,Y$ be topological spaces. We say that maps $f,g : X \to Y$ are homotopic ($f \simeq g$) iff there exists a continoues map $H : X \times I \to Y$ such that
+        for any $x \in X$
+            $$H(x,0) =  f(x) \text{ and } H(x,1) = g(x)$$.
+    \end{definition}
+
+    \begin{definition}[Path]
+        \label{def:path}
+
+        A path between points $x,y \in X$ is a continoues function $\gamma : I \to X$ such that
+            $$\gamma(0) = x \text{ and } \gamma(1) = y$$
+
+    \end{definition}
+
+    \begin{definition}[Loop]
+        \label{def:loop}
+        \uses{def:path}
+
+        A loop is a path where $x = y$.
+    \end{definition}
+
+    \begin{definition}[Homotopy of Paths]
+        \label{def:path_homotopy}
+        \uses{def:path, def:homotopy}
+
+        We say that two paths $\gamma_1, \gamma_2$ ($\gamma_1 \simeq_p \gamma_2$) from $x$ to $y$ are homotopic iff there exists homotopy map $H : I \times I \to X$
+        such that H is homotopy of $\gamma_1, \gamma_2$ and for all $t \in I$ function $H(\cdot, t)$ is a path from $x$ to $y$.
+    \end{definition}
+
+    \begin{lemma}[All paths from $x$ to $y$ in $\mathbb{R}^n$ are Homotopic]
+        \label{lem:Rn_path_equiv_lemma}
+        \uses{def:path_homotopy}
+
+        Any two paths $\gamma_1, \gamma_2$ from $x$ to $y$ in $\mathbb{R}^n$ are homotopic.
+    \end{lemma}
+
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=34}{See here!}
+    \end{proof}
+
+    \begin{theorem}[Homotopy is equvialence relation]
+        \label{thm:homotopy_equiv}
+        \uses{def:homotopy}
+
+        Relation $\simeq$ is an equvialence relation.
+    \end{theorem}
+
+    \begin{theorem}[Homotopy of paths is equvialence relation]
+        \label{thm:path_homotopy_equiv}
+        \uses{thm:homotopy_equiv, def:path_homotopy}
+
+        Relation $\simeq_p$ of paths is an equvialence relation.
+    \end{theorem}
+
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=35}{See here!}
+    \end{proof}
+
+    \begin{definition}[Composition of paths]
+        \label{def:path_composition}
+        \uses{def:path}
+
+        Given to paths $\gamma_1, \gamma_2$ we definte $\gamma_1 \cdot \gamma_2$ by the formula:
+
+        $$
+            \gamma_1 \cdot \gamma_2 (t) =
+            \begin{cases}
+            \gamma_1(2s), & \text{if } t \leq \frac{1}{2}, \\
+            \gamma_2(1-2s), & \text{if } t \geq \frac{1}{2}
+            \end{cases}
+        $$
+    \end{definition}
+
+    \begin{definition}[Inverse of paths]
+        \label{def:path_inverse}
+        \uses{def:path}
+
+        Given to paths $\gamma$ we definte $\bar{\gamma}$ (inverse of $\gamma$) by the formula:
+
+        $$
+            \bar{\gamma}(t) = \gamma(1-t)
+        $$
+    \end{definition}
+
+    \begin{lemma}[Composition of paths is a path]
+        \label{lem:path_comp_path}
+        \uses{def:path,def:path_composition}
+
+        Composition of paths is a path (The map given by \ref{def:path_composition} is continoues)
+    \end{lemma}
+
+    \begin{lemma}[Inverse of paths is a path]
+        \label{lem:path_inverse_path}
+        \uses{def:path,def:path_inverse}
+
+        Inverse of path is a path (The map given by \ref{def:path_inverse} is continoues)
+    \end{lemma}
+
+    \begin{lemma}[Composition of paths depend on homotopy class]
+        \label{lem:path_comp_homoclass}
+        \uses{def:path, def:path_composition, def:path_homotopy,thm:path_homotopy_equiv}
+
+        If $f_0 \simeq_p f_1$ and $g_0 \simeq_p g_1$ then $f_0 \cdot g_0 \simeq_path f_1 \cdot g_1$
+    \end{lemma}
+
+    \begin{lemma}[Inverse of paths depend on homotopy class]
+        \label{lem:path_inverse_homoclass}
+        \uses{def:path, def:path_inverse, def:path_homotopy,thm:path_homotopy_equiv}
+
+        If $f_0,f_1$ are to homotopic paths then $\bar{f_0}, \bar{f_1}$ are also homotopic.
+    \end{lemma}
+
+    \begin{theorem}[Homotopy of loops is equvialence relation]
+        \label{thm:loop_homotopy_equiv}
+        \uses{thm:path_homotopy_equiv, def:path_homotopy}
+
+        Relation $\simeq_l$ of loops is an equvialence relation. (We use $\simeq$ to simplify notation)
+    \end{theorem}
+
+    \begin{lemma}[Composition of loops is a loop]
+        \label{lem:loop_comp_loop}
+        \uses{def:loop, lem:path_comp_path}
+
+        Composition of loops is a loop.
+    \end{lemma}
+
+    \begin{lemma}[Inverse of loop is a loop]
+        \label{lem:loop_inverse_loop}
+        \uses{def:loop,def:path_inverse_path}
+
+        Inverse of loop is a loop (The map given by \ref{def:path_inverse} is continoues)
+    \end{lemma}
+
+    \begin{lemma}[Composition of loops depend on homotopy class]
+        \label{lem:loop_comp_homoclass}
+        \uses{lem:loop_comp_loop, lem:path_comp_homoclass, thm:loop_homotopy_equiv}
+
+        If $f_0 \simeq_p f_1$ and $g_0 \simeq_p g_1$ then $f_0 \cdot g_0 \simeq_p f_1 \cdot g_1$
+    \end{lemma}
+
+    \begin{lemma}[Inverse of loops depend on homotopy class]
+        \label{lem:loop_inverse_homoclass}
+        \uses{lem:loop_inverse_loop, lem:path_inverse_homoclass, thm:loop_homotopy_equiv}
+
+        If $f_0,f_1$ are to homotopic loops then $\bar{f_0}, \bar{f_1}$ are also homotopic.
+    \end{lemma}
+
+    \begin{definition}[Fundamental Group]
+        \label{def:fundamental_group}
+        \uses{lem:loop_comp_homoclass, lem:loop_inverse_homoclass}
+
+        We definie the fundamental group of $(\pi_1(X, x_0),\cdot)$ as the set of equvialence classes of relation $\simeq$ with
+        the operation $\cdot$ - composition of loops
+    \end{definition}
+
+    \begin{lemma}[Composition is associative]
+        \label{lem:loop_comp_assoc}
+        \uses{def:fundamental_group}
+
+        The operation $\cdot$ is associative.
+    \end{lemma}
+
+    \begin{lemma}[Composition has natural element]
+        \label{lem:loop_comp_neutral}
+        \uses{def:fundamental_group}
+
+        There is an neutral element of $\cdot$, which is $[\text{const}_{x_0}]_{\simeq}$
+    \end{lemma}
+
+    \begin{lemma}[Composition has inverse]
+        \label{lem:loop_comp_inv}
+        \uses{def:fundamental_group}
+
+        For every element of $\pi_1(X, x_0)$ there exists an inverse such that:
+
+        $[f] \cdot [g] = [\text{const}_{x_0}]$
+    \end{lemma}
+
+    \begin{theorem} [Fundamental Group is a Group]
+        \label{thm:fundamental_group_is_group}
+        \uses{lem:loop_comp_inv, lem:loop_comp_neutral, lem:loop_comp_assoc}
+
+        The fundamental group is a group
+    \end{theorem}
+
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=36}{See here!}
+    \end{proof}
+
+    \begin{theorem} [Fundamental Group of $\mathbb{R}^n$]
+        \label{thm:Rn_fundamental_group}
+        \uses{thm:fundamental_group_is_group, lem:Rn_path_equiv_lemma}
+
+        The fundamental group of $\mathbb{R}^n$ is trivial
+
+    \end{theorem}
+
+    \begin{proof}
+        \href{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=36}{See here!}
+    \end{proof}
