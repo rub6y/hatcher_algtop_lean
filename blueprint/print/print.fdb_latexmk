@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1763237944.61031 "print.tex" "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.pdf" "print" 1763237951.01587 0
-  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.aux" 1763237950.83394 3886 62471e39aadc5038f6e7ef6283226253 "pdflatex"
-  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.out" 1763237950.83494 544 87db8f675b39172c45c3322fb430eff5 "pdflatex"
+["pdflatex"] 1763240469.54746 "print.tex" "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.pdf" "print" 1763240476.21354 0
+  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.aux" 1763240476.02411 3886 62471e39aadc5038f6e7ef6283226253 "pdflatex"
+  "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.out" 1763240476.02511 544 87db8f675b39172c45c3322fb430eff5 "pdflatex"
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -79,12 +79,12 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1753273864 5896369 026fc05a4d79f072b0ff3569eb2f3907 ""
   "/usr/local/texlive/2025/texmf.cnf" 1753273742.46226 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "content.tex" 1763233324.12552 126 3004b0e84d6d404fdc7f42eb136edf81 ""
+  "content.tex" 1763238091.22151 126 3004b0e84d6d404fdc7f42eb136edf81 ""
   "macros/common.tex" 1762031254.12778 820 60fafcc3aa944a5e60030581a943ef6b ""
   "macros/print.tex" 1762031254.12782 1101 87627b2ec24fef68edc71c13f43f7bab ""
   "print.tex" 1762031254.12782 1165 36f01b60fc9014b9af21e5fcd320f62b ""
   "sections/FundamentalGroup.tex" 1763232900.99448 5589 1c04d393e8e2f303c1bc7e7edefde3ba ""
-  "sections/HomotopyDefinitios.tex" 1763237936.93603 7266 2a5b87ea808658a11c79b7fedc66de02 ""
+  "sections/HomotopyDefinitios.tex" 1763240462.1192 7399 bc24d3ca78d316bd23a7ec7c8e578030 ""
   (generated)
   "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.aux"
   "/home/ru6by/Documents/lean/Official_Lean_Project/hatcher_algtop_lean/blueprint/print/print.log"

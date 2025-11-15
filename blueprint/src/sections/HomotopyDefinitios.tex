@@ -16,7 +16,7 @@
 
     \begin{definition}[Path]
         \label{def:path}
-
+        \mathlibok
         A path between points $x,y \in X$ is a continoues function $\gamma : I \to X$ such that
             $$\gamma(0) = x \text{ and } \gamma(1) = y$$
 
@@ -25,6 +25,8 @@
     \begin{definition}[Loop]
         \label{def:loop}
         \uses{def:path}
+        \lean{Loop}
+        \leanok
 
         A loop is a path where $x = y$.
     \end{definition}
@@ -32,6 +34,8 @@
     \begin{definition}[Homotopy of Paths]
         \label{def:path_homotopy}
         \uses{def:path, def:homotopy}
+        \lean{PathHomotopy}
+        \leanok
 
         We say that two paths $\gamma_1, \gamma_2$ ($\gamma_1 \simeq_p \gamma_2$) from $x$ to $y$ are homotopic iff there exists homotopy map $H : I \times I \to X$
         such that H is homotopy of $\gamma_1, \gamma_2$ and for all $t \in I$ function $H(\cdot, t)$ is a path from $x$ to $y$.
@@ -40,6 +44,7 @@
     \begin{lemma}[All paths from $x$ to $y$ in $\mathbb{R}^n$ are Homotopic]
         \label{lem:Rn_path_equiv_lemma}
         \uses{def:path_homotopy}
+        \lean{Rn_allpathHomotopic}
 
         Any two paths $\gamma_1, \gamma_2$ from $x$ to $y$ in $\mathbb{R}^n$ are homotopic.
     \end{lemma}
