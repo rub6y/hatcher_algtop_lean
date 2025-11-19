@@ -76,6 +76,7 @@ jobs:
             mkdir -p home_page
             cp blueprint/print/print.pdf home_page/blueprint.pdf
             leanblueprint web
+            ./polypuspermuto.sh
             cp -r blueprint/web home_page/blueprint
 
 
